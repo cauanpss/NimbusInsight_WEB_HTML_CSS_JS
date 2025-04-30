@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimbus Insights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/favico.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+</head>
+
+<body>
+    <!--Cabeçalho-->
+    <header class="menu">
+    <nav>
+        <img class="menuLogo" src="assets/sideLogo.png" alt="sideLogo">
+
+        <button class="menuToggle" type="button" aria-label="Abrir menu">   <!--botão para menu JS dentro de responsividade -->
+            <i class="bi bi-list"></i>
+        </button>   <!--Fim botão menuBurguer-->
+        
+        <ul type="none" class="menuLinks">      <!--container lista de botões (burguerMenu)-->
+            <li><a class="link" href="#">Início</a></li>
+            <li><a class="link" href="#about">Sobre nós</a></li>
+            <li><a class="link" href="#services">Serviços</a></li>
+            <!-- <li><a class="link" href="#projects">Projects</a></li> -->
+            <li><a class="link" href="#contacts">Contato</a></li>
+        </ul>       <!--Fim container lista de botões-->
+
+        <button class="darkMode" type="button" aria-label="Alternar Dark Mode" alt="Dark Mode Button">   <!--botão para darkmode JS dentro de responsividade -->
+            <i class="bi bi-sun-fill"></i>
+        </button>   <!--Fim botão darkMode-->
+
+
+    </nav>
+
+    <div id="home" class="inicio" >
+        <h1>Nimbus Insights</h1>
+        <p>Sensoriamento Remoto e Análise Geoespacial</p>
+    </div>
+
+    </header>
+
+    <!--Principal-->
+    <main class="main">
+
+        <!-- Seção "Sobre"-->
+        <section id="about" class="sobre">
+            <div style="text-align: center;">
+                <img class="sobreLogo" src="assets/mainLogo.png" alt="mainLogo">
+            </div>
+            <div class="sobreConteudo">
+                <h2>Sobre nós</h2>
+                <p> 
+                    A Nimbus Insights é uma empresa de geociências focada em geotecnologias e soluções geoespaciais baseadas principalmente em dados orbitais, visão computacional, computação em nuvem, inteligência artificial e ciência de dados.
+                    Com uma equipe multidisciplinar de especialistas, a Nimbus Insights atua em diversos setores, como mineral, ambiental, petróleo e gás, agricultura e pecuária, entre outros.
+                    A missão da Nimbus Insights é unir tecnologia de ponta com geociências, buscando soluções práticas e eficientes, promovendo a inovação e mantendo a responsabilidade ambiental.
+                </p>
+        </div>
+        </section>
+
+        <!--Seção "Serviços"-->
+        <section id="services" class="carousel-container"> <!--Container carrossel-->
+            
+            <h1>Serviços</h1>
+           
+            <button class="carousel-control prev" aria-label="Anterior">
+                <i class="bi bi-arrow-left-circle"></i>
+            </button> <!--Botão "anterior"-->
+            
+            <div class="carousel-slides">
+
+                <div class="carousel-item"><!--Slides-->
+                    <img class="servicoImagem" src="assets/icon_OrbitalDataSurvey.png" alt="">
+                    <h3>Levantamento de Dados Orbitais</h3>
+                    <p>Aquisição de dados Sentinel, Landsat, ASTER, CHIRPS, MODIS e outras fontes globais.</p>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_geospatialCharacterization.png" alt="">
+                    <h3>Caracterização Geoespacial</h3>
+                    <p>Precipitação, temperatura, relevo, declive, hipsometria, DEM e séries temporais.</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_mineralExploration.png" alt="">
+                    <h3>Exploração Mineral</h3>
+                    <p>Análises espectrais, PCA, ICA, índices minerais e métodos supervisionados e não supervisionados.</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_hydrographicStudies.png" alt="">
+                    <h3>Estudos Hidrográficos</h3>
+                    <p>Delimitação de bacias hidrográficas, estudos de escoamento, análise de drenagem e detecção de áreas propensas a inundações.</p>
+                </div>    
+                    
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_hydrographicStudies.png" alt=""> <!--VERIFICAR IMAGEM CORRETA (ESTAVA QUEBRANDO O LAYOUT)-->
+                    <h3>Monitoramento Ambiental</h3>
+                    <p>Monitoramento de desmatamento, detecção de incêndios florestais, análise de erosão costeira e detecção de derramamentos de óleo.</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <img class="servicoImagem" src="assets/icon_urbanism.png" alt="">
+                    <h3>Urbanismo e Infraestrutura</h3>
+                    <p>Monitoramento da expansão urbana, planejamento de infraestrutura de mobilidade e análise do microclima urbano.</p>
+                </div>
+            
+            </div>
+
+            <button class="carousel-control next" aria-label="Próximo">
+                <i class="bi bi-arrow-right-circle"></i>
+            </button> <!--Botão next-->
+
+        </section>         
+
+        <!-- Seção "Contato" -->
+        <section id="contacts" class="contato-section">
+            <h2>Fale Conosco</h2> <!-- Título de contato -->
+            <div class="contato-content">
+                <div class="contato-formulario">
+                    <form id="formContato" onsubmit="return validarFormulario()">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+        
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+        
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" required placeholder="Seu telefone">
+        
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="consultoria">Solicitação de Orçamento</option>
+                            <option value="suporte">Suporte Técnico</option>
+                            <option value="orcamento">Consultoria em Geoprocessamento</option>
+                        </select>
+        
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" required placeholder="Sua mensagem"></textarea>
+        
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>                     
+            </div>
+        </section>
+    </main>    
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nimbus Insigths</h3>
+                <p>Soluções em geotecnologia e materiais de alta performance para transformar seu projeto.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <!-- <li><a href="#produtos">Produtos</a></li> -->
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>AV TANCREDO NEVES 1189 ED GUIMARAES TRADE SL</p>
+                <p>Salvador-BA - BA, 41820-021</p>
+                <p>CNPJ 54.300.766/0001-10</p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nimbus Insgths. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <!--JavaScript-->
+    <script src="script.js"></script>
+</body>
+</html>
