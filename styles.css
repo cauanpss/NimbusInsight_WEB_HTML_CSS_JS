@@ -35,14 +35,16 @@ header .img {
 
 nav {
     display: flex;
-    justify-content: space-between;
-    padding-right: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     padding: 10px 20px;
+}
+
+nav ul {
+    margin-left: 53%;
 }
 
 .menuLogo {
@@ -82,8 +84,7 @@ nav {
     background-color: #3494c83f;
     color: #76dfff;
     border-radius: 25px;
-    border-color: #3495c8;
-    margin-left: -630px;
+    border-color: #3495c8;    
     z-index: 1001;
     position: relative;
 }
@@ -97,7 +98,7 @@ nav {
     border-radius: 25px;
     width: 32px;
     height: 30px;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .inicio h1 {
@@ -444,6 +445,7 @@ body.dark-mode .footer{
     background-color: #757575;
 }
 
+
 /* Responsividade para telas pequenas*/
 @media (max-width: 768px) {
 
@@ -458,8 +460,6 @@ nav {
     flex-direction: column;
     align-items: flex-start;
 }
-  
-
 
 .menuLinks {
     flex-direction: column;
