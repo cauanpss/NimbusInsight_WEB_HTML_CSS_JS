@@ -34,7 +34,7 @@ slidesContainer.addEventListener('touchstart', (e) => {
 slidesContainer.addEventListener('touchend', (e) => {
   const touchEndX = e.changedTouches[0].clientX;
   const distance = touchStartX - touchEndX;
-  const threshold = 50;
+  const threshold = 15;
 
   if (distance > threshold) {
     showSlide(currentIndex + 1); // swipe para esquerda
