@@ -66,25 +66,30 @@ menuItems.forEach(link => {
 });
 
 //efeito de rolagem em mobile
-let touchStartX = 0;
-let touchEndX = 0;
+let touchStartX = null;
+let touchEndX = null;
 
 slidesContainer.addEventListener('touchstart', (e) => {
-  touchStartX = e.changedTouches[0].screenX;
+  touchStartX = e.touches[0].clientX;
 });
 
-slidesContainer.addEventListener('touchend', (e) => {
-  touchEndX = e.changedTouches[0].screenX;
-  handleSwipeGesture();
+slidesContainer.addEventListener('touchmove', (e) => {
+  touchEndX = e.touches[0].clientX;
 });
 
-function handleSwipeGesture() {
+slidesContainer.addEventListener('touchend', () => {
+  if (touchStartX === null || touchEndX === null) return;
+
+  const distance = touchStartX - touchEndX;
   const swipeThreshold = 50;
 
-  if (touchEndX < touchStartX - swipeThreshold) {
-    showSlide(currentIndex + 1); // Swipe para esquerda → próximo
+  if (distance > swipeThreshold) {
+    showSlide(currentIndex + 1); // Esquerda → próximo
+  } else if (distance < -swipeThreshold) {
+    showSlide(currentIndex - 1); // Direita → anterior
   }
-  if (touchEndX > touchStartX + swipeThreshold) {
-    showSlide(currentIndex - 1); // Swipe para direita → anterior
-  }
-}
+
+  // Reset para novos gestos
+  touchStartX = null;
+  touchEndX = null;
+});
