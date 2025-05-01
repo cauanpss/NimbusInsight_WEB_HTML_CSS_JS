@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Reset de segurança (não obrigatório aqui, mas bom para depuração futura)
     startX = 0;
+
+    console.log('startX:', startX, 'endX:', e.changedTouches[0].clientX);
   });
 
   // Dark mode
