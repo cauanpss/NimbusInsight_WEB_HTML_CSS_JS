@@ -25,28 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(0);
 
   // Swipe gesture
-  let touchStartX = null;
-  let touchEndX = null;
+let touchStartX = 0;
 
-  slidesContainer.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-  });
+slidesContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].clientX;
+});
 
-  slidesContainer.addEventListener('touchmove', (e) => {
-    touchEndX = e.touches[0].clientX;
-  });
+slidesContainer.addEventListener('touchend', (e) => {
+  const touchEndX = e.changedTouches[0].clientX;
+  const distance = touchStartX - touchEndX;
+  const threshold = 50;
 
-  slidesContainer.addEventListener('touchend', () => {
-    if (touchStartX === null || touchEndX === null) return;
-    const distance = touchStartX - touchEndX;
-    const threshold = 50;
-
-    if (distance > threshold) showSlide(currentIndex + 1);
-    else if (distance < -threshold) showSlide(currentIndex - 1);
-
-    touchStartX = null;
-    touchEndX = null;
-  });
+  if (distance > threshold) {
+    showSlide(currentIndex + 1); // swipe para esquerda
+  } else if (distance < -threshold) {
+    showSlide(currentIndex - 1); // swipe para direita
+  }
+});
 
   // Dark mode
   const savedTheme = localStorage.getItem('theme');
