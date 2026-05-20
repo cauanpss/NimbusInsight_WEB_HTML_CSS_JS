@@ -1,0 +1,13 @@
+Cores:
+
+Mostarda: Mostarda #ffbf00 Mostarda
+
+Azul Escuro: Azul Escuro #0b2a49 Azul Escuro
+transparencia: #0b2a499d
+
+Azul Mediano: Azul Mediano #3495c8 Azul Mediano
+
+Azul Claro: Azul Claro #76dfff Azul Claro
+
+Branco: Branco #fffffd Branco
+

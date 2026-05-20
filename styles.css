@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Playwrite+AU+SA:wght@291&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    color: black;
+    background-image: url(assets/backgroundImageNimbus.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+main {
+    /* background-color: #0b2a496b; */
+    padding-top: 120px; /* compensar navbar fixa */
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .img {
+    width: 150px;
+    height: 100px;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+nav ul {
+    margin-left: 53%;
+}
+
+.menuLogo {
+    width: 112px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.menuLinks {
+    display: flex;
+    padding: 8px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.menuLinks li a:hover {
+    background-color: #3494c8a1;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 8px;
+    margin-right: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 20px;
+}
+
+.darkMode {
+    margin-top: 20px;
+    width: 32px;
+    height: 30px;
+    background-color: #3494c83f;
+    color: #76dfff;
+    border-radius: 25px;
+    border-color: #3495c8;    
+    z-index: 1001;
+    position: relative;
+}
+
+.darkMode:hover {
+    cursor: pointer;
+    background-color: #134e6b;
+}
+
+.menuToggle {
+    border-radius: 25px;
+    width: 32px;
+    height: 30px;
+    visibility: hidden;
+}
+
+.inicio h1 {
+    color: #ffbf00;
+    margin-left: 100px;
+    font-size: 100px;
+}
+
+.inicio p {
+    color: #fffffd;
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+.sobre {
+    display: flex;
+    height: 100%;
+    padding: 40px;
+    align-items: center;
+}
+
+.sobreConteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sobre h2 {
+    color: #ffbf00;
+    font-size: 55px;
+    text-align: center;
+}
+
+.sobre p {
+    color: #fffffd;
+    font-size: 30px;
+}
+
+.servicoImagem {
+    width: 50px;
+    height: 100px;
+}
+
+.carousel-container {
+    padding-top: 120px;
+    position: relative;
+    overflow: hidden; 
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.carousel-container h1 {
+    color: #ffbf00;
+    font-size: 55px;
+    text-align: center;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.4s ease;
+    will-change: transform;
+    touch-action: pan-y;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-item h3,
+.carousel-item p {
+    color: white;
+}
+
+.carousel-item .servicoImagem {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    object-fit: contain;
+  }
+  
+.carousel-item img {
+    width: 150px;
+    height: 150px;
+}
+.carousel-control {
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    background-color: #ffbf00;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #0b2a49;
+    border-radius: 50px;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.carousel-control:hover {
+    opacity: 0.8;
+}
+
+.carousel-control.prev {
+    left: 450px;
+}
+
+.carousel-control.next {
+    right: 450px;
+}
+
+/* CONTATO */
+.contato-section {
+    padding-top:150px;
+    text-align: center;
+}
+
+.contato-section h2 {
+    font-size: 55px; 
+    color: #ffbf00; 
+    margin-bottom: 30px;
+}
+
+.contato-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* FORMULÁRIO CONTATO */
+.contato-formulario {
+    flex: 1; 
+    max-width: 650px; 
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.contato-info h3 {
+    font-size: 1.5rem;
+    color: #0b2a49; 
+    margin-bottom: 15px;
+}
+
+.contato-formulario label {
+    display: block;
+    font-weight: bold; 
+    color: #0b2a49; 
+    margin-top: 10px;
+}
+
+.contato-formulario input, .contato-formulario select, .contato-formulario textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 15px;
+    border: 2px solid #3495c8;
+    border-radius: 15px;
+    font-size: 1rem;
+    display: block; 
+}
+
+.contato-formulario input:focus, .contato-formulario textarea:focus {
+    border-color: #3495c8; 
+}
+
+.contato-formulario button {
+    margin-top: 30px;
+    background-color: #3495c8;
+    color: #fffffd; 
+    padding: 12px 25px;
+    border: 2px solid #0b2a49; 
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.contato-formulario button:hover {
+    background-color: #134e6b; 
+}
+
+.contato-info {
+    padding: 20px; 
+    width: 100%; 
+    max-width: 650px; 
+}
+
+.contato-info h3 {
+    font-size: 1.5rem; 
+    color: #0b2a49; 
+    margin-bottom: 5px; 
+}
+
+.contato-info p {
+    font-size: 1rem;
+    color: #0b2a49; 
+    margin-bottom: 5px;
+}
+
+/* RODAPÉ*/
+.footer {
+    background-color: #0b2a49; 
+    color: #fffffd;
+    padding: 30px 20px; 
+    text-align: center; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px; 
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1; 
+    max-width: 300px; 
+}
+
+.footer-section h3 {
+    font-size: 1.5rem; 
+    color: #ffbf00; 
+    margin-bottom: 15px; 
+}
+
+.footer-section ul {
+    list-style: none; 
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; 
+}
+
+.footer-section ul li a {
+    color: #76dfff; 
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #3495c8; 
+}
+
+.footer-section p{
+    text-align: justify;
+}
+
+.footer-divider {
+    margin: 30px 0; 
+    border-top: 1px solid #3495c8; 
+}
+
+.footer-bottom {
+    padding: 10px 20px; 
+}
+
+.footer-bottom p {
+    font-size: 1rem; 
+    color: #fffffd;
+}
+
+/* DarkMode geral */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Fundo escuro para áreas principais */
+body.dark-mode{
+    background-image: url(assets/backgroundImageNimbusLightModeWhite.webp);
+
+}
+
+/* Textos primários */
+body.dark-mode .inicio h1,
+body.dark-mode .sobre h2,
+body.dark-mode .carousel-container h1,
+body.dark-mode .contato-section h2,
+body.dark-mode .footer-section h3 {
+    color: #0b2a49;
+}
+
+/* Textos secundários */
+body.dark-mode .inicio p,
+body.dark-mode .sobre p,
+body.dark-mode .carousel-item h3,
+body.dark-mode .carousel-item p,
+body.dark-mode .footer-section p,
+body.dark-mode .footer-bottom p,
+body.dark-mode .contato-info h3,
+body.dark-mode .contato-formulario label {
+    color:#011f30;
+}
+
+/* Botão do formulário */
+body.dark-mode .contato-formulario button {
+    background-color: #0b2a49;
+    color: #fff;
+    border: 2px solid #3495c8;
+}
+
+body.dark-mode .contato-formulario button:hover {
+    background-color: #1a6a92; 
+}
+
+/* background*/
+body.dark-mode .link{
+    color:#092846;
+}
+
+body.dark-mode .menuLinks li a:hover{
+    color: #0307ff;
+} 
+
+body.dark-mode .menuLogo{
+    background-color: #3495c8;
+    border-radius:12px;
+    width: 127px;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+body.dark-mode .darkMode{
+    background-color:#3754f7e3 ;
+    color: #ffbf00;
+}
+
+body.dark-mode .darkMode:hover{
+    cursor:pointer;
+    background-color: #2051bb;
+}
+
+body.dark-mode .sobre,
+body.dark-mode .carousel-container,
+body.dark-mode .contato-section{
+    background-color: transparent;
+}
+
+body.dark-mode .footer{
+    background-color: #757575;
+}
+
+
+/* Responsividade para telas pequenas*/
+@media (max-width: 768px) {
+
+header {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menuLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    width: 100%;
+}
+  
+.menuLinks li {
+    width: 100%;
+    text-align: center;
+}
+  
+.inicio h1 {
+    font-size: 48px;
+    margin-left: 20px;
+    margin-top: 120px;
+}
+
+.inicio p {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.sobre {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sobre p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.carousel-container h1,
+.contato-section h2 {
+    font-size: 32px;
+}
+
+.carousel-item h3,
+.carousel-item p {
+    font-size: 18px;
+}
+
+.contato-formulario {
+    padding: 20px;
+}
+
+.footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-section {
+    max-width: 100%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+  /* Regra global para imagens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+  /* Ajustes específicos */
+.menuLogo {
+    width: 112px;
+    height: auto;
+}
+  
+  /* Adicionar: tornar responsivo */
+.sobreLogo {
+    max-width: 200px;
+    height: auto;
+}
+
+.servicoImagem {
+    width: 80px;
+    height: auto;
+}
+
+.carousel-item img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+.menuLinks {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.menuLinks.show {
+    display: flex;
+}
+
+.menuToggle {
+    visibility: visible;
+    background-color: transparent;
+    position:absolute;
+    right:20px;
+    top:20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 28px;
+    margin-top: 10px;
+    cursor: pointer;
+    z-index: auto;
+}
+
+
+
+}
