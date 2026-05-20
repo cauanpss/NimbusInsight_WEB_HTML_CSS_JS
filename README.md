@@ -1,5 +1,5 @@
 PT-BR
-Inicialmente um projeto de faculdade feito em grupo, afim de desenvolver um site. Posteriormente atualiazdo e desenvolvido individualmente.
+Projeto de faculdade feito em grupo, afim de desenvolver um site utilizando HTML + CSS + JS.  
+Utilizando-se de métodos de desenvolvimento visando UI/UX.
 
-ENG
-Initially a college project done as a group, with the aim of developing a website. Later updated and developed individually.
+link para visualização: https://cauanpss.github.io/NimbusInsight_WEB_HTML_CSS_JS/
